@@ -78,7 +78,7 @@ local function deploy0(cfg, context)
 end
 
 local function mgcPath(prj)
-	return string.format("manifests\\%s\\MicrosoftGame.Config", prj.name)
+	return string.format("%s\\..\\..\\gdk\\MicrosoftGameConfig.mgc", prj.location)
 end
 
 local function generateAppxManifest(prj)
@@ -348,7 +348,7 @@ local resources = {
 p.override(p.oven, "bakeFiles", function (base, prj)
 	local files = base(prj)
 
-	if hasXboxConfig(prj) then
+	if hasXboxConfig(prj) or hasGdkConfig(prj) then
 		local function addFile(cfg, fname, isXdk)
 			-- If this is the first time I've seen this file, start a new
 			-- file configuration for it. Track both by key for quick lookups
@@ -387,6 +387,10 @@ p.override(p.oven, "bakeFiles", function (base, prj)
 				end
 
 				prj._createsDummyManifest = true
+			else
+				local fn = p.filename(prj, mgcPath(prj))
+				local fcfg = addFile(cfg, fn, false)
+				fcfg.buildaction = "MGCCompile"
 			end
 		end
 

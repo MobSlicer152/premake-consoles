@@ -11,5 +11,6 @@ if not premake.modules.consoles then
 	include 'xbox.lua'
 	include 'durango.lua'
 	include 'scarlett.lua'
+	include 'desktop.lua'
 	include 'xboxone_gdk.lua'
 end
