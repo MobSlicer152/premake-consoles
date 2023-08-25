@@ -37,4 +37,8 @@ filter { "system:gaming_desktop", "kind:StaticLib" }
 	targetprefix ""
 	targetextension ".lib"
 
+filter { "system:gaming_desktop", "kind:SharedLib" }
+    targetprefix ""
+    targetextension ".dll"
+
 filter {}
