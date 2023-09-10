@@ -40,5 +40,5 @@ filter { "system:scarlett", "kind:StaticLib" }
 filter { "system:scarlett", "kind:SharedLib" }
     targetprefix ""
     targetextension ".dll"
-
+    implibextension ".lib"
 filter {}

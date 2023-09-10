@@ -39,5 +39,5 @@ filter { "system:gaming_desktop", "kind:StaticLib" }
 filter { "system:gaming_desktop", "kind:SharedLib" }
     targetprefix ""
     targetextension ".dll"
-
+    implibextension ".lib"
 filter {}

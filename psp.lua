@@ -38,7 +38,7 @@ filter {}
 
 -- PSP-specific Premake filter settings
 premake.psp = {}
-premake.psp.PSPSDK = os.getenv("PSPSDK") or os.getenv("PSPDEV") .. "/psp/sdk" or "$PSPSDK"
+premake.psp.PSPSDK = os.getenv("PSPSDK") or (os.getenv("PSPDEV") or "") .. "/psp/sdk" or "$PSPSDK"
 premake.psp.CC = "psp-gcc"
 premake.psp.CXX = "psp-g++"
 premake.psp.AS = "psp-gcc"
