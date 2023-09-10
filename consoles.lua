@@ -10,4 +10,7 @@ if not premake.modules.consoles then
 	-- xbox
 	include 'desktop.lua'
 	include 'scarlett.lua'
+
+	-- playstation
+	include 'psp.lua'
 end

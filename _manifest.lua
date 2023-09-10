@@ -6,5 +6,6 @@
 return {
 	'consoles.lua',
 	'desktop.lua',
-	'scarlett.lua'
+	'scarlett.lua',
+	'psp.lua'
 }

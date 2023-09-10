@@ -1,6 +1,5 @@
 --
 -- Gaming Desktop support for Visual Studio backend.
--- Copyright Blizzard Entertainment, Inc
 --
 
 --
