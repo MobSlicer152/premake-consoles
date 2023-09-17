@@ -57,7 +57,7 @@ p.tools.psp.tools = {
 	cc = p.psp.CC,
 	cxx = p.psp.CXX,
 	ar = p.psp.AR,
-	rc = "psp-windres"
+	rc = "echo"
 }
 p.tools.psp.shared.architecture = {
     mips = "-no-pie -fpermissive"
